@@ -7,8 +7,8 @@ SHELL ["/bin/bash", "-c"]
 
 WORKDIR /root/
 
-RUN apt-get update
-RUN apt-get install -y \
+ARG CACHE_DATE=2023-03-31
+RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     wget \
     bzip2 \
     apt-utils \
