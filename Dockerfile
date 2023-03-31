@@ -11,7 +11,6 @@ RUN apt-get update
 RUN apt-get install -y wget bzip2 apt-utils git
 RUN apt-get install -y \
     g++ \
-    python3-dev \
     libeigen3-dev \
     wget \
     cmake \
