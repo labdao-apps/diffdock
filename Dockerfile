@@ -1,5 +1,5 @@
 FROM nvidia/cuda:11.6.0-cudnn8-devel-ubuntu20.04
-
+ENV TZ=Asia/Hong_Kong
 
 RUN chsh -s /bin/bash
 
