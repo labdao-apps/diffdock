@@ -1,5 +1,6 @@
 FROM nvidia/cuda:11.6.0-cudnn8-devel-ubuntu20.04
 ENV TZ=Asia/Hong_Kong
+ARG DEBIAN_FRONTEND=noninteractive
 
 RUN chsh -s /bin/bash
 
