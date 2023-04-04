@@ -44,8 +44,8 @@ RUN cd openbabel-3.1.1 && cmake \
     -DSWIG_EXECUTABLE=/opt/conda/bin/swig \
     -DPYTHON_LIBRARY=/opt/conda/lib/libpython3.10.so \
     -DCMAKE_BUILD_TYPE=DEBUG
-RUN make -j4
-RUN make install
+RUN cd openbabel-3.1.1 && make -j4
+RUN cd openbabel-3.1.1 && make install
 
 ENV PATH /opt/conda/bin:$PATH
 
