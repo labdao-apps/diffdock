@@ -34,8 +34,7 @@ RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_6
 # Installing OpenBabel
 RUN wget https://github.com/openbabel/openbabel/releases/download/openbabel-3-1-1/openbabel-3.1.1-source.tar.bz2
 RUN tar -xjf openbabel-3.1.1-source.tar.bz2
-RUN cd openbabel-3.1.1
-RUN cmake ../openbabel-3.1.1 \
+RUN cd openbabel-3.1.1 && cmake \
     -DPYTHON_BINDINGS=ON \
     -DRUN_SWIG=ON \
     -DCMAKE_INSTALL_PREFIX=/opt/conda \
