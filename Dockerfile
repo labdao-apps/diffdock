@@ -77,17 +77,5 @@ RUN git submodule init
 RUN git submodule update
 RUN pip install -e ./esm/.
 
-RUN chmod 777 test.sh
-RUN oddt_cli test/test.sdf \
-    --receptor test/test.pdb \
-    #--score autodock_vina \
-    #--score rfscore \
-    --score rfscore_v1 \
-    --score rfscore_v2 \
-    --score rfscore_v3 \
-    --score nnscore \
-    #--score pleclinear \
-    #--score plecnn \
-    #--score plecrf \
-    -O test/test_scored.sdf
+RUN chmod 777 test.sh && ./test.sh
 CMD ["bash"]
