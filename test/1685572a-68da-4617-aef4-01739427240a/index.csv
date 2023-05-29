@@ -1,0 +1,7 @@
+protein_path,ligand
+/inputs/4bn4_stripped_no_ions.pdb,/inputs/1a30_ligand.sdf
+/inputs/test.pdb,/inputs/1a30_ligand.sdf
+/inputs/4bn4_stripped_no_ions.pdb,/inputs/3rfm_mol.sdf
+/inputs/test.pdb,/inputs/3rfm_mol.sdf
+/inputs/4bn4_stripped_no_ions.pdb,/inputs/test.sdf
+/inputs/test.pdb,/inputs/test.sdf
