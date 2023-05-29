@@ -31,22 +31,6 @@ RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_6
         find /opt/conda/ -follow -type f -name '*.js.map' -delete && \
         /opt/conda/bin/conda clean -afy
 
-# Installing OpenBabel
-RUN wget https://github.com/openbabel/openbabel/releases/download/openbabel-3-1-1/openbabel-3.1.1-source.tar.bz2
-RUN tar -xjf openbabel-3.1.1-source.tar.bz2
-RUN cd openbabel-3.1.1 && cmake \
-    -DPYTHON_BINDINGS=ON \
-    -DRUN_SWIG=ON \
-    -DCMAKE_INSTALL_PREFIX=/opt/conda \
-    -DPYTHON_INCLUDE_DIR=/opt/conda/include/python3.10 \
-    -DCMAKE_LIBRARY_PATH=/opt/conda/lib \
-    -DSWIG_DIR=/opt/conda/share/swig/4.0.2 \
-    -DSWIG_EXECUTABLE=/opt/conda/bin/swig \
-    -DPYTHON_LIBRARY=/opt/conda/lib/libpython3.10.so \
-    -DCMAKE_BUILD_TYPE=DEBUG
-RUN cd openbabel-3.1.1 && make -j4
-RUN cd openbabel-3.1.1 && make install
-
 ENV PATH /opt/conda/bin:$PATH
 
 # setup conda virtual environment
@@ -68,9 +52,6 @@ RUN pip install --no-cache-dir -r ./requirements_docker_GPU_oddt.txt
 
 RUN pip install torch-scatter torch-sparse -f https://data.pyg.org/whl/torch-1.13.0+cu116.html
 RUN pip install torch-geometric torch-cluster -f https://data.pyg.org/whl/torch-1.13.0+cu116.html
-
-#install oddt
-RUN pip3 install oddt
 
 COPY . .
 RUN git submodule init
