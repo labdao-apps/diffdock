@@ -1,0 +1,6 @@
+{"ligand":"/inputs/1a30_ligand.sdf","protein_path":"/inputs/4bn4_stripped_no_ions.pdb"}
+{"ligand":"/inputs/1a30_ligand.sdf","protein_path":"/inputs/test.pdb"}
+{"ligand":"/inputs/3rfm_mol.sdf","protein_path":"/inputs/4bn4_stripped_no_ions.pdb"}
+{"ligand":"/inputs/3rfm_mol.sdf","protein_path":"/inputs/test.pdb"}
+{"ligand":"/inputs/test.sdf","protein_path":"/inputs/4bn4_stripped_no_ions.pdb"}
+{"ligand":"/inputs/test.sdf","protein_path":"/inputs/test.pdb"}
